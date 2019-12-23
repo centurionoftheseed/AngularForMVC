@@ -1,25 +1,25 @@
-﻿mainModule.controller("mainHomeViewModel", function (
+﻿mainModule.controller("mainHomeListViewModel", function (
     $scope, $http, $q, $routeParams, $window,
     $location, viewModelHelper) {
 
     var self = this;
 
-    
+
     $scope.topic =
-        "Integrating ASP.NET MVC and AngularJS";
+        "INSIDE mainHomeListViewModel";
     $scope.author = "Miguel A. Castro";
 
-    console.log("THIS IS THE MAIN HOME VIEW MODEL BEING CALLED")
+
     $scope.viewModelHelper = viewModelHelper;
     //$scope.customerService = customerService;
-    $scope.pageHeading = "This is the Main Home View Model";
+    $scope.pageHeading = "this is the main home list view model";
 
     var initialize = function () {
         $scope.refreshCustomers();
     }
 
     $scope.refreshCustomers = function () {
-        console.log("inside refresh customers in mainHomeViewModel");
+        console.log("inside refresh customers in MAIN HOME LIST VIEW MODEL");
         viewModelHelper.apiGet('api/customers', null,
             function (result) {
                 $scope.customers = result.data;
@@ -32,7 +32,7 @@
     //    viewModelHelper.navigateTo('customer/show/' + customer.CustomerId);
     //}
 
-    //initialize();
+    initialize();
 
 });
 
