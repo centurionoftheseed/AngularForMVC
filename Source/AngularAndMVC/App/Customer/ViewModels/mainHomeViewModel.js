@@ -11,7 +11,7 @@
 
     $scope.viewModelHelper = viewModelHelper;
     //$scope.customerService = customerService;
-    $scope.pageHeading = "test from main module";
+    $scope.pageHeading = "test 2 from main module";
 
     var initialize = function () {
         $scope.refreshCustomers();
