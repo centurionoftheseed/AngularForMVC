@@ -9,6 +9,7 @@
         "INSIDE mainHomeListViewModel";
     $scope.author = "Miguel A. Castro";
 
+    $scope.flags = { shownFromList: true };
 
     $scope.viewModelHelper = viewModelHelper;
     //$scope.customerService = customerService;
@@ -27,10 +28,11 @@
             });
     }
 
-    //$scope.showCustomer = function (customer) {
-    //    $scope.flags.shownFromList = true; // note this object is declared in the RootViewModel
-    //    viewModelHelper.navigateTo('customer/show/' + customer.CustomerId);
-    //}
+    $scope.showCustomer = function (customer) {
+        console.log(customer);
+        $scope.flags.shownFromList = true; // note this object is declared in the RootViewModel
+        viewModelHelper.navigateTo('customer/show/' + customer.CustomerId);
+    }
 
     initialize();
 

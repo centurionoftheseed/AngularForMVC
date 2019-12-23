@@ -18,14 +18,14 @@
         $scope.refreshCustomers();
     }
 
-    $scope.refreshCustomers = function () {
-        console.log("inside refresh customers in mainHomeViewModel");
-        viewModelHelper.apiGet('api/customers', null,
-            function (result) {
-                $scope.customers = result.data;
-                console.table($scope.customers);
-            });
-    }
+    //$scope.refreshCustomers = function () {
+    //    console.log("inside refresh customers in mainHomeViewModel");
+    //    viewModelHelper.apiGet('api/customers', null,
+    //        function (result) {
+    //            $scope.customers = result.data;
+    //            console.table($scope.customers);
+    //        });
+    //}
 
     //$scope.showCustomer = function (customer) {
     //    $scope.flags.shownFromList = true; // note this object is declared in the RootViewModel

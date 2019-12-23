@@ -145,6 +145,7 @@
     <Content Include="App\Customer\ViewModels\CustomerListViewModel.js" />
     <Content Include="App\Customer\ViewModels\CustomerViewModel.js" />
     <Content Include="App\Customer\ViewModels\mainHomeListViewModel.js" />
+    <Content Include="App\Customer\ViewModels\mainHomeTestViewModel.js" />
     <Content Include="App\Customer\ViewModels\mainHomeViewModel.js" />
     <Content Include="App\Customer\ViewModels\RootViewModel.js" />
     <Content Include="App\Customer\Views\CustomerHomeView.html" />
