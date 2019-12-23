@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Customers";
+}
+@section scripts {
+    <script src="~/App/App.js"></script>
+    <script src="~/App/Customer/ViewModels/mainHomeViewModel.js"></script>
+
+}
+@section jsCode {
+    angular.bootstrap(document.getElementById("main"), ['main']);
+}
+
+<div ng-non-bindable>
+    <div id="main" data-ng-controller="mainHomeViewModel">
+        <h2>{{ pageHeading }}</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary"
+                        ng-click="refreshCustomers()">
+                    Customer List
+                </button>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-primary"
+                        ng-click="showCustomer()">
+                    Customer
+                </button>&nbsp;
+                <input type="text"
+                       ng-model="customerService.customerId" />
+            </div>
+        </div>
+        <hr />
+        <div ng-view></div>
+        <hr />
+        <div>
+            <a href="/product" target="_self">Products</a>
+            &nbsp;|&nbsp;
+            <a href="/order" target="_self">Orders</a>
+        </div>
+    </div>
+</div>
