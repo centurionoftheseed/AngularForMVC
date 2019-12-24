@@ -1,6 +1,8 @@
 ﻿var commonModule = angular.module('common', ['ngRoute']);
 var mainModule = angular.module('main', ['common']);
 
+
+
 commonModule.factory('viewModelHelper',
     function ($http, $q, $window, $location) {
         return MyApp.viewModelHelper(
@@ -135,6 +137,12 @@ mainModule.config(function ($routeProvider,
         templateUrl: '/App/Customer/Views/MainHomeView.html',
         controller: 'mainHomeViewModel'
     });
+
+    $routeProvider.when('/customer/show/:customerId', {
+        templateUrl: '/App/Customer/Views/CustomerView.html',
+        controller: 'customerViewModel'
+    });
+
     //$routeProvider.when('/customer/list', {
     //    templateUrl: '/App/Customer/Views/CustomerListView.html',
     //    controller: 'customerListViewModel'

@@ -28,13 +28,30 @@
             });
     }
 
-    $scope.showCustomer = function (customer) {
-        console.log(customer);
-        $scope.flags.shownFromList = true; // note this object is declared in the RootViewModel
-        viewModelHelper.navigateTo('customer/show/' + customer.CustomerId);
-    }
+    //$scope.showCustomer = function (customer) {
+    //    console.log(customer);
+    //    $scope.flags.shownFromList = true; // note this object is declared in the RootViewModel
+    //    viewModelHelper.navigateTo('customer/show/' + customer.CustomerId);
+
+    //    $scope.refreshCustomer = function (customerId) {
+    //        viewModelHelper.apiGet('api/customer/' + customerId, null,
+    //            function (result) {
+    //                customerService.customerId = customerId;
+    //                $scope.customer = result.data;
+    //            });
+    //    }
+    //}
 
     initialize();
+
+
+    //var initialize = function () {
+    //    $scope.refreshCustomer($routeParams.customerId);
+    //}
+
+  
+
+    
 
 });
 
